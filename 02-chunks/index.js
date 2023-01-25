@@ -1,10 +1,10 @@
-function chunks(value) {
-  if (!value) return ''
+function chunks(size) {
+  if (!size) return ''
 
-  if (value === 1) {
+  if (size === 1) {
     return 'chunk'
   } else {
-    return `chunk-${chunks(value - 1)}`
+    return `chunk-${chunks(size - 1)}`
   }
 }
 

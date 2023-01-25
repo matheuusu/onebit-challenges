@@ -1,8 +1,12 @@
-function sorted(arg) {
+function sorted(array) {
   const flatSorted = []
 
-  for (let element of arg) {
-    flatSorted.push(...element)
+  for (let item of array) {
+    if (Array.isArray(item)) {
+      flatSorted.push(...sorted(item))
+    } else {
+      flatSorted.push(item)
+    }
   }
 
   return flatSorted.sort((a, b) => a - b)

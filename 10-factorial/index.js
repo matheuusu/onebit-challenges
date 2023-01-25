@@ -1,5 +1,6 @@
-function factorial(arg) {
-  const bigNum = BigInt(arg)
+function factorial(number) {
+  const bigNum = BigInt(number)
+
   if (bigNum === 0n) {
     return 1n
   } else {

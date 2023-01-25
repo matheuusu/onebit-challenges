@@ -1,10 +1,11 @@
-function invert(arg) {
-  const letters = arg
+function invert(letters) {
+  const letterArray = letters
     .toLowerCase()
     .split(' ')
     .map(letter => letter.split('').reverse().join(''))
+    .join(' ')
 
-  return letters.join(' ')
+  return letterArray
 }
 
 console.log(invert('Lorem ipsum dolor sec avanti'))

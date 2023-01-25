@@ -1,10 +1,10 @@
-function highestLetter(arg) {
-  const letterArray = arg
+function highestLetter(string) {
+  const letters = string
     .toLowerCase()
     .split('')
     .sort((a, b) => a.localeCompare(b))
 
-  return letterArray[letterArray.length - 1]
+  return letters[letters.length - 1]
 }
 
 console.log(highestLetter('Lorem ipsum dolor sec avanti'))

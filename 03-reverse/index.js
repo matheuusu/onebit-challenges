@@ -1,10 +1,8 @@
 function reverse(...args) {
-  let newArray = []
+  const newArray = []
 
-  if (!args) return ''
-
-  for (let i = 0; i < args.length; i++) {
-    newArray[i] = args[args.length - 1 - i]
+  for (let i = args.length - 1; i >= 0; i--) {
+    newArray.push(args[i])
   }
 
   return newArray
